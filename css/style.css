@@ -1,0 +1,44 @@
+#quiz,
+#finish,
+#Correct,
+#inCorrect {
+    display: none;
+}
+*:focus{
+    outline: none !important;
+}
+.form-control:focus,
+.form-check:focus{
+    border: #653383 1px solid !important;
+    box-shadow: none;
+}
+.form-check-input:checked {
+    background-color: #653383;
+    border-color: #653383;
+    box-shadow: none;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* //background-image: linear-gradient(to left, #aa2ff2, #9e45f7, #9354fb, #8861fd, #7e6cfe); */
+    background-image: url(../imges/Wave-100s-1366px\ \(2\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+}
+
+.text-col {
+    color: #653383
+}
+
+.bg-col {
+    background-color: #653383 !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+.alert {
+    display: none;
+}

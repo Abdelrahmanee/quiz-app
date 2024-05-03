@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz App</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="imges/quiz.png" type="image/x-icon">
+    <!-- link Css files -->
+    <!-- link Font Awesome -->
+    <link 
+    rel="stylesheet" 
+    href="css/all.min.css">
+    <!-- link booystrap Css file -->
+    <link 
+    rel="stylesheet" 
+    href="css/bootstrap.min.css">
+    <!-- link Css style Sheet -->
+    <link 
+    rel="stylesheet" 
+    href="css/style.css">
+</head>
+
+<body class="bg-light  py-5">
+    <section id="setting">
+        <div class="bg-white overflow-auto w-50 m-auto shadow-lg  rounded-lg">
+            <h1 class="text-center text-col py-5 bg-light border-bottom">Setting Your Quiz</h1>
+            <div class="p-4">
+                <!-- Category -->
+                <div class="quiz-type">
+                    <label for="category" class="text-col">Category</label>
+                    <select id="category" class="form-control" aria-label="Default select example">
+                        <option class="form-control" value="9">General Knowledge</option>
+                        <option class="form-control" value="27">Animals</option>
+                        <option class="form-control" value="15">Video Games</option>
+                        <option class="form-control" value="23">History</option>
+                        <option class="form-control" value="21">Sports</option>
+                        <option class="form-control" value="18">Science:computers</option>
+                </div>
+                </select>
+                <!-- Difficulty -->
+                <div class="form-group">
+                    <label for="difficulty" class="text-spec"> Difficulty</label>
+                    <div class="form-check" id="difficulty">
+
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="difficulty" id="easy" value="easy"
+                                checked>
+                            Easy
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="difficulty" id="medium" value="medium">
+                            Medium
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="difficulty" id="hard" value="hard">
+                            Hard
+                        </label>
+                    </div>
+
+                </div>
+
+                <input id="numberOfQuestions" class="form-control" type="number" placeholder="Number of questions">
+
+                <div id="alert1" class="alert alert-danger mt-3">Please Choose Your Answer</div>
+
+                <div id="startBtn" class="btn  py-2 px-4 text-white float-end my-4 bg-col rounded-pill">Start</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- QUIZ  -->
+
+    <section id="quiz">
+        <div class="bg-white w-50 m-auto shadow-lg rounded-lg  overflow-auto">
+            <div class="p-3 bg-light border-bottom overflow-auto">
+                <h1 class="text-spec text-center">Quiz</h1>
+                <span class="float-end bg-col rounded-pill text-white p-2 "><span id="currentQuestion"></span> Of <span
+                        id="totalNumberOfQuestions"></span> Question</span>
+
+                <span id="inCorrect" class="btn btn-danger float-start">InCorrect</span>
+                <span id="Correct" class="btn btn-success float-start">Correct</span>
+                <div class="clearFix"></div>
+
+            </div>
+
+            <div class="p-4 text-spec">
+                <h5 class="d-inline">Q: </h5>
+                <h5 id="question" class="d-inline"></h5>
+                <div id="rowAnswer" class="py-2">
+
+                </div>
+                <div id="alert" class="alert alert-danger mt-3">Please Choose Your Answer</div>
+                <button class="btn d-block bg-col float-end py-2 px-4 bg-spec rounded-pill text-white my-4"
+                    id="next">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="finish">
+        <div class="bg-white w-50 m-auto shadow-lg rounded-lg  overflow-auto">
+            <div class="p-3 bg-light border-bottom overflow-auto">
+                <h1 class="text-col text-center">finsh</h1>
+            </div>
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <h5 class=" text-col">score</h5>
+                <h4 class=" text-col" id="score"></h4>
+            </div>
+
+            <button class="btn d-block bg-col float-end py-2 px-4 bg-spec rounded-pill text-white my-4 me-3"
+                id="tryAgain">try Again?</button>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
